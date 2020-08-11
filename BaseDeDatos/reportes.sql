@@ -33,3 +33,5 @@ CREATE TABLE Info_Extra(
     CONSTRAINT fk_Info FOREIGN KEY(Id_Personal) REFERENCES  Persona(Id_Personal)
 );
 
+
+
