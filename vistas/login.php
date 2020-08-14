@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="header">
-        <img class="header__img" src="../Photos/3_White_logo_on_color1_243x69.png" alt="Logo">
+        <img class="header__img" src="" alt="Logo"/>
     </header>
     <section class="login">
         <section class="login__container">
