@@ -12,6 +12,11 @@ body{
     align-items: center;
 }
 
+h2{
+    font-size: 37px;
+    color: black;
+}
+
 .header__img{
     width: 150px;
     margin-top: 7px;
@@ -19,7 +24,7 @@ body{
 }
 
 .login{
-    background: linear-gradient(#3776CC, #37CC8E);
+    background-color: #3776CC;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,10 +34,10 @@ body{
 }
 
 .login__container{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: white;
     border: 2px solid white;
     border-radius: 40px;
-    color: white;
+    color: black;
     padding: 60px 68px 40px;
     min-height: 550px;
     width: 300px;
@@ -51,14 +56,14 @@ body{
 }
 
 .login__container--remeber{
-    color: white;
+    color: black;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
 .login__container--remember a{
-    color: white;
+    color: black;
     font-size: 14px;
     text-decoration: none;
 }
@@ -67,12 +72,11 @@ body{
     text-decoration: underline;
 }
 
-input{
-    background-color: transparent;
+.input{
+
     border-left: 0px;
     border-top: 0px;
     border-right: 0px;
-    border-bottom: 2px solid white;
     font-family: 'Muli', sans-serif;
     font-size: 16px;
     border-radius: 25px;
@@ -83,7 +87,7 @@ input{
 }
 
 .button{
-    background-color: rgba(255,255,255,0.1);
+    background-color: green;
     border-radius: 25px;
     color: white;
     cursor: pointer;
@@ -96,6 +100,6 @@ input{
 } 
 
 .footer{
-    background-color: #37CC8E;
+    background-color: #3776CC;
     height: 42px;
 }
