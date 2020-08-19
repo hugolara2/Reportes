@@ -9,14 +9,13 @@
 
         $sql = "SELECT usuario, contrasenia FROM Usuario WHERE Usuario = $usuario AND contrasenia = $contra";
         $result = mysqli_query($conn, $sql);
-        
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
 
         if($count == 1){
-            session_register("usuario");
-            $_SESSION['login_user'] = $usuario;
+            $_SESSION['login'] = $usuario;
 
-            header("location: vistas/recuperar.html");
+            header("location: ../vistas/recuperar.html");
         }else{
             $error = "Usuario y/o contraseña invalidos";
         }
