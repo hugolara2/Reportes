@@ -1,27 +1,27 @@
 <?php   
     include 'conection.php';
 
-    session_start();
-
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $usuario = mysqli_real_escape_string($conn, $_POST['usuario']);
         $contra = mysqli_real_escape_string($conn, $_POST['passwrd']);
 
-        echo $usuario." ".$contra;
+        $sql = "SELECT Usuario FROM Usuarios WHERE Usuario = '$usuario' AND Passwrd = '$contra'";
+        $query = mysqli_query($conn, $sql);
+        $result = mysqli_num_rows($query);
 
-        $sql = "SELECT* FROM Usuario WHERE Usuario = $usuario AND Contrasenia = $contra";
-        $result = mysqli_query($conn, $sql);    
-        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-        $activo = $row['Activo'];
+        echo $result;
 
-        $count = mysqli_num_rows($result);
+        if($result > 1){
+            $data = mysqli_fetch_array($query);
+            session_start();
+            $_SESSION['active'] = true;
+            $_SESSION['User'] = $data['Usuario'];
 
-        if($count == 1){
-            $_SESSION['login'] = $usuario;
+            header('Location: recuperar.php');
 
-            header("location: ../vistas/recuperar.php");
-        }else{
-            $error = "Usuario y/o contraseña invalidos";
+        }
+        else{
+
         }
 
     }

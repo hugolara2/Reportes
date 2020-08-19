@@ -30,10 +30,11 @@ CREATE TABLE Info_Extra(
     CONSTRAINT fk_Info FOREIGN KEY(Id_Personal) REFERENCES  Personal(Id_Personal)
 );
 
-CREATE TABLE Usuario(
+CREATE TABLE Usuarios(
     Id_Personal BIGINT NOT NULL,
     Usuario VARCHAR(10) NOT NULL,
     Contrasenia VARCHAR(50) NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
     CONSTRAINT fk_Usuario FOREIGN KEY(Id_Personal) REFERENCES Personal(Id_Personal)
 );
 
