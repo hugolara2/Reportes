@@ -33,7 +33,11 @@ CREATE TABLE Info_Extra(
 CREATE TABLE Usuarios(
     Id_Personal BIGINT NOT NULL,
     Usuario VARCHAR(10) NOT NULL,
+<<<<<<< HEAD
     Contrasenia VARCHAR(50) NOT NULL,
+=======
+    Passwrd VARCHAR(50) NOT NULL,
+>>>>>>> logica
     Estado VARCHAR(15) NOT NULL,
     CONSTRAINT fk_Usuario FOREIGN KEY(Id_Personal) REFERENCES Personal(Id_Personal)
 );

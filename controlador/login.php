@@ -11,11 +11,10 @@
 
         echo $result;
 
-        if($result > 1){
-            $data = mysqli_fetch_array($query);
-            session_start();
-            $_SESSION['active'] = true;
-            $_SESSION['User'] = $data['Usuario'];
+        $sql = "SELECT* FROM Usuarios WHERE Usuario = '$usuario' AND Passwrd = '$contra'";
+        $result = mysqli_query($conn, $sql);    
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $activo = $row['active'];
 
             header('Location: recuperar.php');
 
