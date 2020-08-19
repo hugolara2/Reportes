@@ -22,6 +22,7 @@
             header("location: ../vistas/recuperar.php");
         }else{
             $error = "Usuario y/o contraseña invalidos";
+            echo "Todo chido";
         }
 
     }
