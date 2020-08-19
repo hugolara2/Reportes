@@ -15,7 +15,7 @@
         if($count == 1){
             $_SESSION['login'] = $usuario;
 
-            header("location: ../vistas/recuperar.html");
+            header("location: ../vistas/recuperar.php");
         }else{
             $error = "Usuario y/o contraseña invalidos";
         }
