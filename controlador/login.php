@@ -13,10 +13,10 @@
         $count = mysqli_num_rows($result);
 
         if($count == 1){
-            //session_register("usuario");
+            session_register("usuario");
             $_SESSION['login_user'] = $usuario;
 
-            header("location: recuperar.html");
+            header("location: vistas/recuperar.html");
         }else{
             $error = "Usuario y/o contraseña invalidos";
         }
