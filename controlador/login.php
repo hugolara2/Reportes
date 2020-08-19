@@ -1,11 +1,13 @@
 <?php   
-    include_once 'conection.php';
+    include 'conection.php';
 
     session_start();
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $usuario = mysqli_real_escape_string($conn, $_POST['usuario']);
         $contra = mysqli_real_escape_string($conn, $_POST['passwrd']);
+
+        echo $usuario." ".$contra;
 
         $sql = "SELECT usuario, contrasenia FROM Usuario WHERE Usuario = $usuario AND contrasenia = $contra";
         $result = mysqli_query($conn, $sql);
